@@ -87,22 +87,22 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Téléphone",
-      content: "+33 1 23 45 67 89",
+      content: "06 89 12 11 11",
     },
     {
       icon: Mail,
       title: "Email",
-      content: "contact@saveursdumonde.fr",
+      content: "contact@travelsfood.fr",
     },
     {
       icon: MapPin,
       title: "Adresse",
-      content: "Paris, France",
+      content: "Nantes, France",
     },
   ];
 
   return (
-    <div className="min-h-screen bg-background font-inter">
+    <div className="min-h-screen bg-background font-jakarta">
       <Navbar />
 
       <div className="pt-32 pb-20">
@@ -249,7 +249,7 @@ const Contact = () => {
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full bg-gradient-hero text-primary-foreground hover:opacity-90 transition-opacity shadow-elegant"
+                  className="w-full bg-gradient-hero text-primary-foreground hover:scale-105 hover:shadow-glow transition-all duration-300 shadow-elegant font-semibold text-lg py-6"
                 >
                   <Send className="mr-2 h-5 w-5" />
                   Envoyer la demande
