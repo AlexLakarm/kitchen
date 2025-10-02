@@ -9,7 +9,7 @@ const Footer = () => {
           {/* About */}
           <div>
             <h3 className="font-playfair text-xl font-bold text-primary mb-4">
-              Saveurs du Monde
+              TravelsFood
             </h3>
             <p className="font-inter text-muted-foreground text-sm leading-relaxed">
               Votre partenaire traiteur premium pour des événements professionnels inoubliables. 
@@ -44,15 +44,15 @@ const Footer = () => {
             <ul className="space-y-3 font-inter text-sm">
               <li className="flex items-start gap-2 text-muted-foreground">
                 <Phone size={16} className="mt-1 text-primary flex-shrink-0" />
-                <span>+33 1 23 45 67 89</span>
+                <span>06 89 12 11 11</span>
               </li>
               <li className="flex items-start gap-2 text-muted-foreground">
                 <Mail size={16} className="mt-1 text-primary flex-shrink-0" />
-                <span>contact@saveursdumonde.fr</span>
+                <span>contact@travelsfood.fr</span>
               </li>
               <li className="flex items-start gap-2 text-muted-foreground">
                 <MapPin size={16} className="mt-1 text-primary flex-shrink-0" />
-                <span>Paris, France</span>
+                <span>Nantes, France</span>
               </li>
             </ul>
           </div>
@@ -60,7 +60,7 @@ const Footer = () => {
 
         <div className="mt-12 pt-8 border-t border-border text-center">
           <p className="font-inter text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} Saveurs du Monde. Tous droits réservés.
+            &copy; {new Date().getFullYear()} TravelsFood. Tous droits réservés.
           </p>
         </div>
       </div>

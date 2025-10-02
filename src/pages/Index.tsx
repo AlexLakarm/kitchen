@@ -43,7 +43,7 @@ const Index = () => {
   const features = [
     {
       icon: Utensils,
-      title: "Multi-stands Cuisine du Monde",
+      title: "Multi-stands TravelsFood",
       description: "Plusieurs univers culinaires réunis en une seule prestation",
     },
     {
@@ -89,7 +89,7 @@ const Index = () => {
           </p>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-primary-foreground/90 font-light">
             Transformez vos événements professionnels en expériences gastronomiques immersives 
-            avec nos stands de cuisine du monde
+            avec nos stands TravelsFood
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">
@@ -151,7 +151,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in-up">
             <h2 className="font-playfair text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Nos Stands Cuisine du Monde
+              Nos Stands TravelsFood
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
               Des univers culinaires authentiques et raffinés pour sublimer vos événements

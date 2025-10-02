@@ -19,10 +19,10 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="hover:opacity-80 transition-opacity text-center">
-            <div className="font-playfair text-2xl font-bold text-primary">
+            <div className="font-playfair text-3xl font-bold text-primary">
               TravelsFood
             </div>
-            <div className="font-jakarta text-xs text-muted-foreground font-medium tracking-wide">
+            <div className="font-jakarta text-sm text-muted-foreground font-medium tracking-wide">
               traiteur événementiel
             </div>
           </Link>
@@ -33,17 +33,17 @@ const Navbar = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`font-jakarta font-medium transition-colors ${
+                className={`font-jakarta font-semibold text-lg transition-all duration-300 hover:scale-105 ${
                   isActive(link.path)
                     ? "text-primary"
-                    : "text-foreground/70 hover:text-primary"
+                    : "text-foreground/80 hover:text-primary hover:drop-shadow-sm"
                 }`}
               >
                 {link.label}
               </Link>
             ))}
             <Link to="/contact">
-              <Button className="bg-gradient-hero text-primary-foreground hover:opacity-90 transition-opacity shadow-elegant text-lg px-8 py-6">
+              <Button className="bg-gradient-hero text-primary-foreground hover:scale-105 hover:shadow-glow transition-all duration-300 shadow-elegant text-lg px-8 py-6 font-semibold">
                 Contactez-nous
               </Button>
             </Link>
@@ -68,17 +68,17 @@ const Navbar = () => {
                   key={link.path}
                   to={link.path}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`font-jakarta font-medium py-2 transition-colors ${
+                  className={`font-jakarta font-semibold text-lg py-3 transition-all duration-300 hover:scale-105 ${
                     isActive(link.path)
                       ? "text-primary"
-                      : "text-foreground/70 hover:text-primary"
+                      : "text-foreground/80 hover:text-primary"
                   }`}
                 >
                   {link.label}
                 </Link>
               ))}
               <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>
-                <Button className="w-full bg-gradient-hero text-primary-foreground hover:opacity-90 transition-opacity text-lg px-8 py-6">
+                <Button className="w-full bg-gradient-hero text-primary-foreground hover:scale-105 hover:shadow-glow transition-all duration-300 shadow-elegant text-lg px-8 py-6 font-semibold">
                   Contactez-nous
                 </Button>
               </Link>
