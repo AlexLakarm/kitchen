@@ -3,40 +3,46 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { ChefHat, Globe, Sparkles, Users } from "lucide-react";
+import { ChefHat, Utensils, Sparkles, Wine } from "lucide-react";
 import heroImage from "@/assets/hero-catering.jpg";
 import standAsian from "@/assets/stand-asian.jpg";
 import standMediterranean from "@/assets/stand-mediterranean.jpg";
-import standFrench from "@/assets/stand-french.jpg";
+import standFrench from "@/assets/cuisinefr.jpeg";
 import standLatin from "@/assets/stand-latin.jpg";
+import standAmerican from "@/assets/usa.jpeg";
 
 const Index = () => {
   const cuisines = [
     {
-      title: "Cuisine Asiatique",
+      title: "Asie du Sud-Est",
       image: standAsian,
-      description: "Sushi, dim sum et saveurs d'Extrême-Orient",
+      description: "Banh mi, Bao, Satay, Lok-Lak, toutes les saveurs de l'Asie.  ",
     },
     {
       title: "Méditerranée",
       image: standMediterranean,
-      description: "Mezze, tapas et délices du bassin méditerranéen",
+      description: "Mezze, arrancini, kefta et autres délices du bassin méditerranéen.",
     },
     {
-      title: "Pâtisserie Française",
+      title: "Française",
       image: standFrench,
-      description: "Macarons, éclairs et douceurs raffinées",
+      description: "Croques-monsieur, Pâté en croûte, Boeuf bourguignon, nos portes drapeaux dans vos assiettes.",
+    },
+    {
+      title: "USA",
+      image: standAmerican, // Image temporaire, sera remplacée par l'image de burgers
+      description: "Burgers, Grilled cheese, bagels, hot dogs et autres icônes de la street food.",
     },
     {
       title: "Amérique Latine",
       image: standLatin,
-      description: "Tacos, empanadas et saveurs épicées",
+      description: "Ceviche, Tacos, Empanadas et autres saveurs épicées.",
     },
   ];
 
   const features = [
     {
-      icon: Globe,
+      icon: Utensils,
       title: "Multi-stands Cuisine du Monde",
       description: "Plusieurs univers culinaires réunis en une seule prestation",
     },
@@ -51,14 +57,14 @@ const Index = () => {
       description: "Des professionnels passionnés par leur cuisine",
     },
     {
-      icon: Users,
-      title: "Pour Professionnels",
-      description: "Solutions sur-mesure pour vos événements B2B",
+      icon: Wine,
+      title: "Bar convivial et tendance",
+      description: "Pensé pour offrir une expérience moderne qui s'adapte aux envies d'aujourd'hui",
     },
   ];
 
   return (
-    <div className="min-h-screen bg-background font-inter">
+    <div className="min-h-screen bg-background font-jakarta">
       <Navbar />
 
       {/* Hero Section */}
@@ -71,27 +77,30 @@ const Index = () => {
         </div>
 
         <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground animate-fade-in-up">
-          <h1 className="font-playfair text-5xl md:text-7xl font-bold mb-6 leading-tight">
+          <h1 className="font-playfair text-5xl md:text-7xl font-bold mb-4 leading-tight">
             Un Voyage Culinaire
             <br />
             <span className="bg-gradient-to-r from-accent to-accent/70 bg-clip-text text-transparent">
               À Travers le Monde
             </span>
           </h1>
+          <p className="font-jakarta text-lg md:text-xl mb-6 text-primary-foreground/80 font-medium italic">
+            • Nantes et alentours •
+          </p>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-primary-foreground/90 font-light">
             Transformez vos événements professionnels en expériences gastronomiques immersives 
-            avec nos stands de cuisine internationale
+            avec nos stands de cuisine du monde
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">
               <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-glow text-lg px-8 py-6">
-                Demander un devis
+                Nous contacter
               </Button>
             </Link>
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 text-lg px-8 py-6"
+              className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 text-lg px-8 py-6 bg-background/20 backdrop-blur-sm"
               onClick={() => document.getElementById('cuisines')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Découvrir nos stands

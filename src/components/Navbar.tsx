@@ -11,7 +11,6 @@ const Navbar = () => {
 
   const navLinks = [
     { path: "/", label: "Accueil" },
-    { path: "/contact", label: "Contact" },
   ];
 
   return (
@@ -19,8 +18,13 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="font-playfair text-2xl font-bold text-primary hover:opacity-80 transition-opacity">
-            Saveurs du Monde
+          <Link to="/" className="hover:opacity-80 transition-opacity text-center">
+            <div className="font-playfair text-2xl font-bold text-primary">
+              TravelsFood
+            </div>
+            <div className="font-jakarta text-xs text-muted-foreground font-medium tracking-wide">
+              traiteur événementiel
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -29,7 +33,7 @@ const Navbar = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`font-inter font-medium transition-colors ${
+                className={`font-jakarta font-medium transition-colors ${
                   isActive(link.path)
                     ? "text-primary"
                     : "text-foreground/70 hover:text-primary"
@@ -39,8 +43,8 @@ const Navbar = () => {
               </Link>
             ))}
             <Link to="/contact">
-              <Button className="bg-gradient-hero text-primary-foreground hover:opacity-90 transition-opacity shadow-elegant">
-                Demander un devis
+              <Button className="bg-gradient-hero text-primary-foreground hover:opacity-90 transition-opacity shadow-elegant text-lg px-8 py-6">
+                Contactez-nous
               </Button>
             </Link>
           </div>
@@ -64,7 +68,7 @@ const Navbar = () => {
                   key={link.path}
                   to={link.path}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`font-inter font-medium py-2 transition-colors ${
+                  className={`font-jakarta font-medium py-2 transition-colors ${
                     isActive(link.path)
                       ? "text-primary"
                       : "text-foreground/70 hover:text-primary"
@@ -74,8 +78,8 @@ const Navbar = () => {
                 </Link>
               ))}
               <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>
-                <Button className="w-full bg-gradient-hero text-primary-foreground hover:opacity-90 transition-opacity">
-                  Demander un devis
+                <Button className="w-full bg-gradient-hero text-primary-foreground hover:opacity-90 transition-opacity text-lg px-8 py-6">
+                  Contactez-nous
                 </Button>
               </Link>
             </div>
