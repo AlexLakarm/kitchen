@@ -12,7 +12,7 @@ import { z } from "zod";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Le nom est requis").max(100),
-  company: z.string().trim().min(1, "L'entreprise est requise").max(100),
+  company: z.string().trim().max(100).optional(),
   email: z.string().trim().email("Email invalide").max(255),
   phone: z.string().trim().min(1, "Le téléphone est requis").max(20),
   eventDate: z.string().min(1, "La date est requise"),
@@ -154,13 +154,14 @@ const Contact = () => {
                     )}
                   </div>
                   <div>
-                    <Label htmlFor="company">Entreprise *</Label>
+                    <Label htmlFor="company">Entreprise</Label>
                     <Input
                       id="company"
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
                       className={errors.company ? "border-destructive" : ""}
+                      placeholder="Optionnel"
                     />
                     {errors.company && (
                       <p className="text-destructive text-sm mt-1">{errors.company}</p>
