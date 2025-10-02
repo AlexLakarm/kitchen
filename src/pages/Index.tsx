@@ -92,7 +92,7 @@ const Index = () => {
             avec nos stands TravelsFood
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact">
+            <Link to="/contact" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-glow text-lg px-8 py-6">
                 Nous contacter
               </Button>
@@ -200,7 +200,7 @@ const Index = () => {
           <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
             Contactez-nous pour discuter de votre projet et recevoir un devis personnalisé
           </p>
-          <Link to="/contact">
+          <Link to="/contact" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
             <Button 
               size="lg" 
               className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 shadow-glow text-lg px-8 py-6"
